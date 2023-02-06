@@ -1,3 +1,4 @@
+import 'package:asa_zaoa/Module/My_car_model.dart';
 import 'package:asa_zaoa/Module/appbar_customspace.dart';
 import 'package:flutter/material.dart';
 
@@ -49,19 +50,642 @@ class _my_car_blankState extends State<my_car_blank> {
           ),
         ),
       ),
-      body: Container(
-        child: Column(
+      body: SafeArea(
+        child: ListView(
           children: [
-            Text(
-              "Select Brand",
-              style: TextStyle(
-                  fontSize: 20, fontFamily: "Verela", color: Color(0xFF5F5F5F)),
+            Container(
+              child: Center(
+                child: Text(
+                  "Select Brand",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: "Varela",
+                    color: Color(0xFF5F5F5F),
+                  ),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Center(
+                                  child: Image.asset(
+                                    "images/packing.png",
+                                    height: 65,
+                                    width: 85,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Toyota',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Chocolate Cream Wafer Biscuit',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Chocolate Cream Wafer Biscuit',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/caricon1.png.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Chocolate Cream Wafer Biscuit',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Mitsbishi',
+                                      style: TextStyle(fontFamily: "Varela")),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Chocolate Cream Wafer Biscuit',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 20,
+                ),
+                Container(
+                  height: 110,
+                  width: 110,
+                  padding: EdgeInsets.zero,
+                  margin: const EdgeInsets.fromLTRB(2, 10, 1, 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.2))
+                      ]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Stack(
+                      children: [
+                        Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset(
+                                  "images/car1.png",
+                                  height: 65,
+                                  width: 85,
+                                  fit: BoxFit.fill,
+                                ),
+                                // SizedBox(height: 8),
+                                const Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 8, top: 10, right: 8),
+                                  child: Text('Chocolate Cream Wafer Biscuit',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                //const Text('Wafer Biscuit',style: TextStyle(fontWeight: FontWeight.bold),),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  'Tk.20.00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Center(
+              child: TextButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: ((context) => const my_car_model())),);
+              }, child: Container(
+                height: 60,
+                width: 120,
+                decoration: BoxDecoration(
+                  color: Color(0xff015377),
+                  border: Border.all(width: 4,color: Colors.grey.shade100),
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                child: Center(child: Text('Next',style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w400),)),
+              )),
             ),
           ],
         ),
-
-
       ),
+
+      // body: Container(
+      //   child: Column(
+      //     children: [
+      //       Text(
+      //         "Select Brand",
+      //         style: TextStyle(
+      //             fontSize: 20, fontFamily: "Verela", color: Color(0xFF5F5F5F)),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
