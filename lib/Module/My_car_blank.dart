@@ -1,3 +1,4 @@
+import 'package:asa_zaoa/Module/appbar_customspace.dart';
 import 'package:flutter/material.dart';
 
 class my_car_blank extends StatefulWidget {
@@ -13,150 +14,54 @@ class _my_car_blankState extends State<my_car_blank> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 140,
-            width: 515,
-          decoration: BoxDecoration(
-            color: Color(0xFFF5F5F5),
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(200),
-              bottomRight: Radius.circular(200),
-            )
-          ),
+      appBar: AppBar(
+        toolbarHeight: 160,
+        //leading: Image.asset("images/caricon.png"),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        flexibleSpace: ClipPath(
+          clipper: appbar_customspace(),
+          child: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("images/caricon.png"),
                 Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Text("ADD A NEW CAR",style: TextStyle(
-                    fontSize: 30,
-                    color: Color(0xFF015377)
-                  ),),
-                )
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset("images/caricon.png"),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "ADD A NEW CAR",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "Varela",
+                      color: Color(0xFF015377),
+                    ),
+                  ),
+                ),
               ],
-
             ),
-
+            height: 250,
+            width: MediaQuery.of(context).size.width,
+            color: Color(0xFFF5F5F5),
           ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Container(
-                    child: Image.asset("images/montserrat.png" ),
-                    height: 110,
-                    width: 110,
-                    color: Colors.white,
-                    padding: EdgeInsets.all(12),
-                    margin: EdgeInsets.all(10),
-                  ),
-                  Container(
-                    child: Image.asset("images/montserrat.png" ),
-                    height: 110,
-                    width: 110,
-                    color: Colors.white,
-                    padding: EdgeInsets.all(12),
-                    margin: EdgeInsets.all(10),
-                  ),
-                  Container(
-                    child: Image.asset("images/montserrat.png" ),
-                    height: 110,
-                    width: 110,
-                    color: Colors.white,
-                    padding: EdgeInsets.all(12),
-                    margin: EdgeInsets.all(10),
-                  ),
-                ],
-              ),
-
-            ],
-          ),
-          Container(
-            child: Image.asset("images/montserrat.png" ),
-            height: 110,
-            width: 110,
-            color: Colors.white,
-            padding: EdgeInsets.all(12),
-            margin: EdgeInsets.all(10),
-          ),
-        ],
+        ),
       ),
+      body: Container(
+        child: Column(
+          children: [
+            Text(
+              "Select Brand",
+              style: TextStyle(
+                  fontSize: 20, fontFamily: "Verela", color: Color(0xFF5F5F5F)),
+            ),
+          ],
+        ),
 
 
-
-
-
-
-        // body: Container(
-        //
-        //       height: 140,
-        //       width: 515,
-        //       child: Center(child: Text("ADD A NEW CAR",style: TextStyle(
-        //         fontSize:30,
-        //       ),)),
-        //       decoration: BoxDecoration(
-        //         color: Colors.grey,
-        //         borderRadius: BorderRadius.only(
-        //           bottomRight: Radius.circular(200),
-        //             bottomLeft: Radius.circular(200)),
-        //       ),
-        //     ),
-
-
-      //     Row(
-      //       children: [
-      //
-      //         Container(
-      //           height: 110,
-      //           width: 110,
-      //           color: Colors.lightBlue,
-      //           padding: EdgeInsets.all(4),
-      //           margin: EdgeInsets.all(10),
-      //         ),
-      //         Container(
-      //           height: 110,
-      //           width: 110,
-      //           color: Colors.lightBlue,
-      //           padding: EdgeInsets.all(4),
-      //           margin: EdgeInsets.all(10),
-      //         ),
-      //         Container(
-      //           height: 110,
-      //           width: 110,
-      //           color: Colors.lightBlue,
-      //           padding: EdgeInsets.all(4),
-      //           margin: EdgeInsets.all(10),
-      //         ),
-      //       ],
-      //     ),
-      //     // Container(
-      //     //   height: 110,
-      //     //   width: 110,
-      //     //   color: Colors.lightBlue,
-      //     //   padding: EdgeInsets.all(4),
-      //     //   margin: EdgeInsets.all(10),
-      //     // ),
-      //   ],
-      // ),
-      //
-      //
-      //
-      // // body: Container(
-      // //
-      // //   height: 100,
-      // //   width: 3000,
-      // //   // color: Colors.blue,
-      // //   decoration: BoxDecoration(borderRadius:
-      // //   BorderRadius.only(bottomLeft: Radius.circular(200),bottomRight: Radius.circular(200)
-      // //   ),
-      // //
-      // //     color: Colors.grey,
-      // //   ),
-      // // ),
-
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
